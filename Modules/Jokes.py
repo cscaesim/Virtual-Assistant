@@ -1,4 +1,5 @@
 import requests
+from TextToSpeech import TextToSpeech
 
 
 class Joke():
@@ -10,8 +11,7 @@ class Joke():
         return joke
 
     def tell_Joke(self):
+        tts = TextToSpeech()
         joke = self.get_Joke()
+        tts.speak(joke)
         print(joke)
-
-joke = Joke()
-joke.tell_Joke()

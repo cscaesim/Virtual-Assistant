@@ -50,7 +50,3 @@ class Weather():
               str(format(fahrenheight_temp, '.1f')) +
               " degrees, and the forecast is " +
               current_description + " today.")
-
-
-test = Weather()
-test.checkWeather()
