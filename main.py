@@ -26,14 +26,20 @@ from Modules.Email import Email
 from Modules.Jokes import Joke
 
 
+# def monica():
+#     sr = SpeechToText()
+#     while True:
+#         while True:
+
 def main():
     sr = SpeechToText()
 
     while True:
         # command = input("Please give a command: ")
         command = sr.listen()
+        print(type(command))
         sentence = command
-        tokens = word_tokenize(sentence)
+        tokens = word_tokenize(str(sentence))
         name = []
 
         stop_words = set(stopwords.words('english'))
